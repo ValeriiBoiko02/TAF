@@ -15,9 +15,7 @@ export class BasePage {
   }
 
   async isDarkThemeActive(): Promise<boolean> {
-    const bodyClassAttribute = await this.page
-      .locator('body')
-      .getAttribute('class');
+    const bodyClassAttribute = await this.page.locator('body').getAttribute('class');
     if (bodyClassAttribute === null) {
       return false;
     }

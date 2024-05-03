@@ -13,15 +13,11 @@ test.describe('Header', { tag: '@header' }, () => {
     });
 
     test('Projects button is visible', async ({ homePage }) => {
-      await expect(
-        homePage.headerComponent.getProjectsButtonLocator,
-      ).toBeVisible();
+      await expect(homePage.headerComponent.getProjectsButtonLocator).toBeVisible();
     });
 
     test('Contacts button is visible', async ({ homePage }) => {
-      await expect(
-        homePage.headerComponent.getContactsButtonLocator,
-      ).toBeVisible();
+      await expect(homePage.headerComponent.getContactsButtonLocator).toBeVisible();
     });
   });
 

@@ -7,7 +7,7 @@
     "lint:check": "eslint . --ext .ts",
     "lint:fix": "eslint . --ext .ts --fix",
     "lint:format": "prettier  --loglevel warn --write . ",
-    "lint": "pnpm run lint:format && pnpm run lint:fix"
+    "lint": "npm run lint:format && npm run lint:fix"
   },
   "keywords": [],
   "author": "",

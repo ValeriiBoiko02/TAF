@@ -1,9 +1,9 @@
-import { Locator } from "@playwright/test";
+import { Locator } from '@playwright/test';
 
 export class BaseComponent {
-    readonly container: Locator
-    
-    constructor(container: Locator) {
-        this.container = container
-    }
+  readonly container: Locator;
+
+  constructor(container: Locator) {
+    this.container = container;
+  }
 }

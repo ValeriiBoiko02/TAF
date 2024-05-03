@@ -24,5 +24,16 @@
     "lint-staged": "^15.2.2",
     "prettier": "^3.2.5",
     "typescript-eslint": "^7.8.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.ts": [
+      "prettier  --loglevel warn --write . ",
+      "eslint . --ext .ts --fix"
+    ]
   }
 }

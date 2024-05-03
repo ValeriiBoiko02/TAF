@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint .",
-    "prettier": "prettier --check ."
+    "lint:check": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix",
+    "lint:format": "prettier  --loglevel warn --write . ",
+    "lint": "pnpm run lint:format && pnpm run lint:fix"
   },
   "keywords": [],
   "author": "",
@@ -23,15 +25,15 @@
     "prettier": "^3.2.5",
     "typescript-eslint": "^7.8.0"
   },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
-      "eslint --fix",
-      "prettier --write"
-    ]
-  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
     }
+  },
+  "lint-staged": {
+    "*.ts": [
+      "prettier  --loglevel warn --write . ",
+      "eslint . --ext .ts --fix"
+    ]
   }
 }

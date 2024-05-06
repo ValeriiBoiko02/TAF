@@ -13,7 +13,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
+      - name: Node setup
+        uses: actions/setup-node@v4
         with:
           node-version: lts/*
 
@@ -35,7 +36,8 @@ jobs:
         if: ${{steps.cache.outputs.cache-hit != 'true'}}
         run: cd playwright-tests-v4 && npx playwright test --update-snapshots
     
-      - uses: actions/upload-artifact@v4
+      - name: Upload results
+        uses: actions/upload-artifact@v4
         if: always()
         with:
           name: playwright-report

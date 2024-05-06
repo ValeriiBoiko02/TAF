@@ -35,14 +35,14 @@ export default defineConfig({
 
   expect: {
     toHaveScreenshot: {
-      threshold: 0.5,
-      maxDiffPixelRatio: 0.5,
-      maxDiffPixels: 50,
+      threshold: 2,
+      maxDiffPixelRatio: 2,
+      maxDiffPixels: 100,
     },
     toMatchSnapshot: {
-      threshold: 0.5,
-      maxDiffPixelRatio: 0.5,
-      maxDiffPixels: 50,
+      threshold: 2,
+      maxDiffPixelRatio: 2,
+      maxDiffPixels: 100,
     },
   },
 

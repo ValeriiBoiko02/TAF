@@ -35,6 +35,9 @@ jobs:
       - name: Initialize snapshots
         if: ${{steps.cache.outputs.cache-hit != 'true'}}
         run: cd playwright-tests-v4 && npx playwright test --update-snapshots
+
+      - name: Test
+        run: cd playwright-tests-v4 && npx playwright test
     
       - name: Upload results
         uses: actions/upload-artifact@v4

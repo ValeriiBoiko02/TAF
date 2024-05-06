@@ -29,7 +29,7 @@ test.describe('Header', { tag: '@header' }, () => {
 
     test('Switch to the light theme', async ({ homePage }) => {
       await homePage.headerComponent.turnOnTheme('light');
-      expect(await homePage.isDarkThemeActive()).toBe(true); // should be false
+      expect(await homePage.isDarkThemeActive()).toBe(false);
     });
   });
 });

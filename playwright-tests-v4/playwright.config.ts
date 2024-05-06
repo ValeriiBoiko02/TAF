@@ -33,6 +33,19 @@ export default defineConfig({
     screenshot: 'only-on-failure',
   },
 
+  expect: {
+    toHaveScreenshot: {
+      threshold: 0.5,
+      maxDiffPixelRatio: 0.5,
+      maxDiffPixels: 50,
+    },
+    toMatchSnapshot: {
+      threshold: 0.5,
+      maxDiffPixelRatio: 0.5,
+      maxDiffPixels: 50,
+    },
+  },
+
   /* Configure projects for major browsers */
   projects: [
     {
